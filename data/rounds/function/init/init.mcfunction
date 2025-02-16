@@ -12,3 +12,8 @@ team modify Blue color dark_blue
 
 team modify Red friendlyFire false
 team modify Blue friendlyFire false
+
+# Create necessary scoreboards
+scoreboard objectives add bow_used minecraft.used:minecraft.bow
+scoreboard objectives add crossbow_used minecraft.used:minecraft.crossbow
+scoreboard objectives add arrow_velocity dummy
