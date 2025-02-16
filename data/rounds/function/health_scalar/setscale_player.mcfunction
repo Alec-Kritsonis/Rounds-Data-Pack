@@ -1,0 +1,3 @@
+execute as @s run data modify storage minecraft:rounds AtriScale set value {"AtriScale":0}
+execute as @s store result storage minecraft:rounds AtriScale.AtriScale int 1 run scoreboard players get @s MacroTest
+execute as @s run function rounds:health_scalar/setscalemac with storage minecraft:rounds AtriScale

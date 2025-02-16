@@ -1,0 +1,1 @@
+execute as @a run function rounds:health_scalar/setscale_player
