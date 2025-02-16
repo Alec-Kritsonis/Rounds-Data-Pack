@@ -12,3 +12,6 @@ team modify Blue color dark_blue
 
 team modify Red friendlyFire false
 team modify Blue friendlyFire false
+
+
+scoreboard objectives add MacroTest dummy
