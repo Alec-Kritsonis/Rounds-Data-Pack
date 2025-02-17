@@ -1,1 +1,1 @@
-$execute as @a run attribute @s minecraft:scale base set $(AtriScale)
+$attribute @s minecraft:scale base set $(AtriScale)
