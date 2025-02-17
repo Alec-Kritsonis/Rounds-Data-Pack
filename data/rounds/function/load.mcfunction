@@ -1,7 +1,7 @@
-say Loaded Rounds version: 1
+say Loaded Rounds version: 2
 
 ################################################################################
-# First time setup
+# Setup
 ################################################################################
 function rounds:init/init
 say Main: initialized
