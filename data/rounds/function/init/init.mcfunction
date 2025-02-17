@@ -24,6 +24,6 @@ data modify storage minecraft:rounds temp_scale set value {"AtriScale":0}
 ### Scoreboards
 scoreboard objectives add Variables dummy
 scoreboard objectives add Player_Scales dummy
-scoreboard players set @a Player_Scales 1
+scoreboard players set @a Player_Scales 100
 ### Maps
 function rounds:maps/spawn_markers
