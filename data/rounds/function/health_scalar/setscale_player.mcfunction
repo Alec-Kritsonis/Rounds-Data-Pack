@@ -1,2 +1,2 @@
-execute as @s store result storage minecraft:rounds AtriScale.AtriScale int 1 run scoreboard players get @s MacroTest
-execute as @s run function rounds:health_scalar/setscalemac with storage minecraft:rounds AtriScale
+execute as @s store result storage minecraft:rounds temp.AtriScale double .01 run scoreboard players get @s Player_Scales
+execute as @s run function rounds:health_scalar/setscalemac with storage minecraft:rounds temp

@@ -13,5 +13,7 @@ team modify Blue color dark_blue
 team modify Red friendlyFire false
 team modify Blue friendlyFire false
 
-
-scoreboard objectives add MacroTest dummy
+## Heath Scale 
+scoreboard objectives add Player_Scales dummy
+scoreboard players set @a Player_Scales 1
+data modify storage minecraft:rounds temp set value {"AtriScale":0}
