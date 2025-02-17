@@ -20,3 +20,6 @@ team modify Green friendlyFire false
 
 ### Scoreboards
 scoreboard objectives add Variables dummy
+
+### Maps
+function rounds:maps/spawn_markers
