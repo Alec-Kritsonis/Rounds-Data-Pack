@@ -9,5 +9,5 @@ say Main: initialized
 ################################################################################
 # Reset all
 ################################################################################
-function rounds:reset/all
+function rounds:reset/level/all
 say Main: reset all

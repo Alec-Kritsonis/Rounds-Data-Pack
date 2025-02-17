@@ -18,7 +18,7 @@ team modify Blue friendlyFire false
 team modify Yellow friendlyFire false
 team modify Green friendlyFire false
 
-## Heath Scale 
+### Health Scale
 data modify storage minecraft:rounds temp_scale set value {"AtriScale":0}
 
 ### Scoreboards
