@@ -1,10 +1,8 @@
 #
 # Execute this as an arrow to scale velocity by @p's arrow_velocity score. 1 = 2%, 50 = 100%
+# Also changes damange and pierce level based on @p's respective scoreboard values
 # 
 # If the arrrow's resulting value is over 10 blocks/tick, the game resets it to zero. 166 seems to be fine for bows, 167 has this happen occasionally. This is about a 3.33 multiplier. Try to stay below 166. I did not test the max value with crossbows.
-#
-# This can be used to change the damage the arrow does based on @p's arrow_damage scoreboard value
-# execute store result entity @s damage double 1 run scoreboard players get @p arrow_damage
 #
 
 # Get X Y Z motion and store. Scale by 100 because you need decimals
@@ -27,5 +25,13 @@ execute store result entity @s Motion[0] double 0.0002 run scoreboard players ge
 execute store result entity @s Motion[1] double 0.0002 run scoreboard players get y arrow_velocity
 execute store result entity @s Motion[2] double 0.0002 run scoreboard players get z arrow_velocity
 
+# Get player's arrow damage score and move it to arrow's damage
+execute store result entity @s damage double 1 run scoreboard players get @p arrow_damage
+execute store result entity @s PierceLevel byte 1 run scoreboard players get @p arrow_piercing
+
+# Add relevant tags
+execute if data entity @s {weapon:{components:{"minecraft:custom_data":{explode:1}}}} run tag @s add explosivearrow
+execute if data entity @s {weapon:{components:{"minecraft:custom_data":{launch:1}}}} run tag @s add launcharrow
+
 # Tag it so it doesn't get modified again
-tag @s add yeet
+tag @s add arrowyeet
