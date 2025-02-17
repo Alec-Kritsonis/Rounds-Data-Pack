@@ -25,5 +25,10 @@ data modify storage minecraft:rounds temp_scale set value {"AtriScale":0}
 scoreboard objectives add Variables dummy
 scoreboard objectives add Player_Scales dummy
 scoreboard players set @a Player_Scales 100
+scoreboard objectives add carrot_uses minecraft.used:minecraft.carrot_on_a_stick
+
 ### Maps
 function rounds:maps/spawn_markers
+
+### Effects
+function rounds:reset/effects
