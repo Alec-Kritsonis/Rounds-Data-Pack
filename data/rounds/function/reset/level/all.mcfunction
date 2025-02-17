@@ -3,7 +3,7 @@
 #
 
 ### Scores
-scoreboard players reset global_delay Variables
+scoreboard players reset global_delay Global_Delay
 
 ### Many resets are needed for start of match as well.
 function rounds:reset/level/match

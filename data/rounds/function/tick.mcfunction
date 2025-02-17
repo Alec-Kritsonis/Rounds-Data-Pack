@@ -11,5 +11,5 @@
 execute if score game_state Variables matches 0 as @a[tag=gamer] run function rounds:checks/ready
 
 ### Global Delay Timer
-scoreboard players add global_delay Variables 1
-execute if score global_delay Variables matches 20 run scoreboard players set global_delay Variables 0
+scoreboard players add global_delay Global_Delay 1
+execute if score global_delay Global_Delay matches 20 run scoreboard players set global_delay Global_Delay 0
