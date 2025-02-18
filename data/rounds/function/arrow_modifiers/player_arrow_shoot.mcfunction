@@ -32,6 +32,7 @@ execute store result entity @s PierceLevel byte 1 run scoreboard players get @p 
 # Add relevant tags
 execute if data entity @s {weapon:{components:{"minecraft:custom_data":{explode:1}}}} run tag @s add explosivearrow
 execute if data entity @s {weapon:{components:{"minecraft:custom_data":{launch:1}}}} run tag @s add launcharrow
+execute if data entity @s {weapon:{components:{"minecraft:custom_data":{lightning:1}}}} run tag @s add lightningarrow
 
 # Tag it so it doesn't get modified again
 tag @s add arrowyeet
