@@ -15,12 +15,15 @@ scoreboard players operation x arrow_velocity *= @p arrow_velocity
 scoreboard players operation y arrow_velocity *= @p arrow_velocity
 scoreboard players operation z arrow_velocity *= @p arrow_velocity
 
-# Make sure velocity won't be too high, set it to max if it is
+# Make sure velocity isn't out of bounds, set it to max/min if it is
 execute if score x arrow_velocity matches 50000.. run scoreboard players set x arrow_velocity 50000
 execute if score y arrow_velocity matches 50000.. run scoreboard players set y arrow_velocity 50000
 execute if score z arrow_velocity matches 50000.. run scoreboard players set z arrow_velocity 50000
+execute if score x arrow_velocity matches ..50000 run scoreboard players set x arrow_velocity -50000
+execute if score y arrow_velocity matches ..50000 run scoreboard players set y arrow_velocity -50000
+execute if score z arrow_velocity matches ..50000 run scoreboard players set z arrow_velocity -50000
 
-# Store it back in the arrow
+# Store velocity back in the arrow
 execute store result entity @s Motion[0] double 0.0002 run scoreboard players get x arrow_velocity
 execute store result entity @s Motion[1] double 0.0002 run scoreboard players get y arrow_velocity
 execute store result entity @s Motion[2] double 0.0002 run scoreboard players get z arrow_velocity
@@ -29,9 +32,10 @@ execute store result entity @s Motion[2] double 0.0002 run scoreboard players ge
 execute store result entity @s damage double 1 run scoreboard players get @p arrow_damage
 execute store result entity @s PierceLevel byte 1 run scoreboard players get @p arrow_piercing
 
-# Add relevant tags
+# Add relevant tags for effects
+tag @s add player
 execute if data entity @s {weapon:{components:{"minecraft:custom_data":{explode:1}}}} run tag @s add explosivearrow
-execute if data entity @s {weapon:{components:{"minecraft:custom_data":{launch:1}}}} run tag @s add launcharrow
+execute if data entity @s {weapon:{components:{"minecraft:custom_data":{fountain:1}}}} run tag @s add fountainarrow
 execute if data entity @s {weapon:{components:{"minecraft:custom_data":{lightning:1}}}} run tag @s add lightningarrow
 
 # Tag it so it doesn't get modified again

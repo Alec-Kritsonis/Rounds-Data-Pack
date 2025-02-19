@@ -5,7 +5,10 @@
 execute as @a[scores={bow_used=1..}] at @s as @e[type=arrow,distance=..2,tag=!arrowyeet] run function rounds:arrow_modifiers/player_arrow_shoot
 execute as @a[scores={crossbow_used=1..}] at @s as @e[type=arrow,distance=..2,tag=!arrowyeet] run function rounds:arrow_modifiers/player_arrow_shoot
 execute as @e[type=arrow,nbt={inGround:1b}] at @s run function rounds:arrow_modifiers/inground_effects
-execute as @e[type=arrow] run function rounds:arrow_modifiers/arrow_gravity
+execute as @e[type=arrow,tag=player] run function rounds:arrow_modifiers/arrow_gravity
+
+# When a player is holding a bow, assign their gravity value
+execute as @a if items entity @s weapon.mainhand minecraft:bow run function rounds:arrow_modifiers/bow_gravity
 
 # Reset scores
 function rounds:reset/reset_scores
