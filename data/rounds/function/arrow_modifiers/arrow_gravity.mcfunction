@@ -3,6 +3,12 @@
 # 50 gravity feels about normal
 #
 
+# Use the air tag to give the arrows a timer. Using air instead of scoreboard so it doesn't flood a scoreboard
+execute store result score timer arrow_gravity run data get entity @s Air
+execute if score timer arrow_gravity matches ..0 run kill @s
+scoreboard players remove timer arrow_gravity 1
+execute store result entity @s Air short 1 run scoreboard players get timer arrow_gravity
+
 # Disable inherent gravity
 data merge entity @s {NoGravity:1b}
 

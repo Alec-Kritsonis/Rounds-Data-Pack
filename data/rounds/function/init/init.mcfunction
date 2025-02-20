@@ -21,3 +21,4 @@ scoreboard objectives add arrow_damage dummy
 scoreboard objectives add arrow_piercing dummy
 scoreboard objectives add arrow_gravity dummy
 scoreboard objectives add adebug dummy "Arrow debugging"
+scoreboard players set gravitytimer arrow_gravity 100

@@ -37,6 +37,7 @@ tag @s add player
 execute if data entity @s {weapon:{components:{"minecraft:custom_data":{explode:1}}}} run tag @s add explosivearrow
 execute if data entity @s {weapon:{components:{"minecraft:custom_data":{fountain:1}}}} run tag @s add fountainarrow
 execute if data entity @s {weapon:{components:{"minecraft:custom_data":{lightning:1}}}} run tag @s add lightningarrow
+execute store result entity @s Air short 1 run scoreboard players get gravitytimer arrow_gravity
 
 # Tag it so it doesn't get modified again
 tag @s add arrowyeet

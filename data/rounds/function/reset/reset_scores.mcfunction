@@ -10,3 +10,4 @@ scoreboard players operation Velocity adebug = @a[tag=arrowdebug] arrow_velocity
 scoreboard players operation Damage adebug = @a[tag=arrowdebug] arrow_damage
 scoreboard players operation Piercing adebug = @a[tag=arrowdebug] arrow_piercing
 scoreboard players operation Gravity adebug = @a[tag=arrowdebug] arrow_gravity
+scoreboard players operation Timer adebug = gravitytimer arrow_gravity
