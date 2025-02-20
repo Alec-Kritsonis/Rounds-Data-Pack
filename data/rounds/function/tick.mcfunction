@@ -9,6 +9,7 @@ execute as @e[type=arrow,tag=player] run function rounds:arrow_modifiers/arrow_g
 
 # When a player is holding a bow, assign their gravity value
 execute as @a if items entity @s weapon.mainhand minecraft:bow run function rounds:arrow_modifiers/bow_gravity
+execute as @a if items entity @s weapon.mainhand minecraft:crossbow run function rounds:arrow_modifiers/bow_gravity
 
 # Reset scores
 function rounds:reset/reset_scores
