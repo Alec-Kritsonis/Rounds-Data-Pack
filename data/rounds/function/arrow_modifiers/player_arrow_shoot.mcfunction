@@ -19,9 +19,9 @@ scoreboard players operation z arrow_velocity *= @p arrow_velocity
 execute if score x arrow_velocity matches 50000.. run scoreboard players set x arrow_velocity 50000
 execute if score y arrow_velocity matches 50000.. run scoreboard players set y arrow_velocity 50000
 execute if score z arrow_velocity matches 50000.. run scoreboard players set z arrow_velocity 50000
-execute if score x arrow_velocity matches ..50000 run scoreboard players set x arrow_velocity -50000
-execute if score y arrow_velocity matches ..50000 run scoreboard players set y arrow_velocity -50000
-execute if score z arrow_velocity matches ..50000 run scoreboard players set z arrow_velocity -50000
+execute if score x arrow_velocity matches ..-50000 run scoreboard players set x arrow_velocity -50000
+execute if score y arrow_velocity matches ..-50000 run scoreboard players set y arrow_velocity -50000
+execute if score z arrow_velocity matches ..-50000 run scoreboard players set z arrow_velocity -50000
 
 # Store velocity back in the arrow
 execute store result entity @s Motion[0] double 0.0002 run scoreboard players get x arrow_velocity
