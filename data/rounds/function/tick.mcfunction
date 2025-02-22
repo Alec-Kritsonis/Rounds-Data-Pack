@@ -13,7 +13,7 @@ execute if score game_state Variables matches 0 if score all_ready Variables mat
 execute if score game_state Variables matches 0 if score all_ready Variables matches 1 run scoreboard players set countdown_started Variables 1
 
 ### 1 - bout
-execute if score game_state Variables matches 1 run say WEEEEEEEEEEEE
+execute if score game_state Variables matches 1 run function rounds:game_state/bout/tick
 
 ### Global Delay Timer
 scoreboard players add global_delay Global_Delay 1
