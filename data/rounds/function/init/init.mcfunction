@@ -3,15 +3,36 @@
 #
 
 ### Teams
-
 team add Red
 team add Blue
+team add Yellow
+team add Green
 
 team modify Red color dark_red
 team modify Blue color dark_blue
+team modify Yellow color yellow
+team modify Green color green
 
 team modify Red friendlyFire false
 team modify Blue friendlyFire false
+team modify Yellow friendlyFire false
+team modify Green friendlyFire false
+
+### Health Scale
+data modify storage minecraft:rounds temp_scale set value {"AtriScale":0}
+
+### Scoreboards
+scoreboard objectives add Variables dummy
+scoreboard objectives add Player_Scales dummy
+scoreboard players set @a Player_Scales 100
+scoreboard objectives add carrot_uses minecraft.used:minecraft.carrot_on_a_stick
+scoreboard objectives add Global_Delay dummy
+
+### Maps
+function rounds:maps/spawn_markers
+
+### Effects
+function rounds:reset/effects
 
 # Create necessary scoreboards
 scoreboard objectives add bow_used minecraft.used:minecraft.bow

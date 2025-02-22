@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "mainhand": {
+        "items": "minecraft:carrot_on_a_stick",
+        "components": {
+          "minecraft:custom_name": "[\"\",{\"text\":\"Click to Unready\",\"italic\":false,\"color\":\"red\"}]"
+        }
+      }
+    }
+  }
+}

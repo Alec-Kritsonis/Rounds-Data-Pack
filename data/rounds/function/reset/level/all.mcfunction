@@ -2,5 +2,8 @@
 # Reset everything to whats needed for the start of the game.
 #
 
-### Attributes
-execute as @a run function rounds:reset/attributes
+### Scores
+scoreboard players reset global_delay Global_Delay
+
+### Many resets are needed for start of match as well.
+function rounds:reset/level/match

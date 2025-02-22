@@ -1,7 +1,7 @@
-say Loaded Rounds version: 2
+say Loaded Rounds version: 4
 
 ################################################################################
-# First time setup
+# Setup
 ################################################################################
 function rounds:init/init
 say Main: initialized
@@ -9,5 +9,5 @@ say Main: initialized
 ################################################################################
 # Reset all
 ################################################################################
-function rounds:reset/all
+function rounds:reset/level/all
 say Main: reset all
