@@ -1,2 +1,2 @@
-tag @a remove arrowdebug
-tag @s add arrowdebug
+tag @a remove arrow_debugger
+tag @s add arrow_debugger

@@ -5,9 +5,9 @@
 execute as @a[scores={bow_used=1..}] run scoreboard players set @s bow_used 0
 execute as @a[scores={crossbow_used=1..}] run scoreboard players set @s crossbow_used 0
 
-# Sync scores on arrow debugging scoreboard with whoever is tagged with arrowdebug at the time
-scoreboard players operation Velocity adebug = @a[tag=arrowdebug] arrow_velocity
-scoreboard players operation Damage adebug = @a[tag=arrowdebug] arrow_damage
-scoreboard players operation Piercing adebug = @a[tag=arrowdebug] arrow_piercing
-scoreboard players operation Gravity adebug = @a[tag=arrowdebug] arrow_gravity
-scoreboard players operation Timer adebug = gravitytimer arrow_gravity
+# Sync scores on arrow debugging scoreboard with whoever is tagged with arrow_debugger at the time
+scoreboard players operation Velocity adebug = @a[tag=arrow_debugger] arrow_velocity
+scoreboard players operation Damage adebug = @a[tag=arrow_debugger] arrow_damage
+scoreboard players operation Piercing adebug = @a[tag=arrow_debugger] arrow_piercing
+scoreboard players operation Gravity adebug = @a[tag=arrow_debugger] arrow_gravity
+scoreboard players operation Timer adebug = gravity_timer arrow_gravity
