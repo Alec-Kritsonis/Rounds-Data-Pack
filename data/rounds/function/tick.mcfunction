@@ -19,9 +19,7 @@ execute if score game_state Variables matches 1 run function rounds:game_state/b
 scoreboard players add global_delay Global_Delay 1
 execute if score global_delay Global_Delay matches 20 run scoreboard players set global_delay Global_Delay 0
 
-# When a player is holding a bow, assign their gravity value
-execute as @a if items entity @s weapon.mainhand minecraft:bow run function rounds:arrow_modifiers/bow_gravity
-execute as @a if items entity @s weapon.mainhand minecraft:crossbow run function rounds:arrow_modifiers/bow_gravity
-
 # Reset scores
 function rounds:reset/reset_scores
+
+execute as @e[type=minecraft:item_display,tag=pick_card] at @s run tp @s ~ ~ ~ ~3 ~

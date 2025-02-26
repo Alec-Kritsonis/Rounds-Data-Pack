@@ -1,0 +1,5 @@
+1 = Explosive shot
+2 = Fountain
+3 = Lightning
+4 = Damage up
+5 = Piercing up

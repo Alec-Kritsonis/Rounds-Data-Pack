@@ -39,5 +39,8 @@ execute if data entity @s {weapon:{components:{"minecraft:custom_data":{fountain
 execute if data entity @s {weapon:{components:{"minecraft:custom_data":{lightning:1}}}} run tag @s add lightningarrow
 execute store result entity @s Air short 1 run scoreboard players get gravitytimer arrow_gravity
 
+# Disable crits
+data merge entity @s {crit:0b}
+
 # Tag it so it doesn't get modified again
 tag @s add modified_arrow

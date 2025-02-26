@@ -33,15 +33,18 @@ scoreboard objectives add arrow_damage dummy
 scoreboard objectives add arrow_piercing dummy
 scoreboard objectives add arrow_gravity dummy
 scoreboard objectives add adebug dummy "Arrow debugging"
+scoreboard objectives add pick_card_data dummy "Pick card data"
 
 ### Initialize scoreboards
-scoreboard players set @a arrow_velocity 50
-scoreboard players set @a arrow_damage 100
 scoreboard players set @a Player_Scales 100
-scoreboard players set @a arrow_gravity 100
 
 ### Maps
 function rounds:maps/spawn_markers
+
+### Card picking area
+kill @e[tag=pick_card_marker]
+execute positioned 0 56 0 run summon minecraft:marker 0 56 0 {Tags:["pick_card_marker"]}
+execute at @e[tag=pick_card_marker] run function rounds:pick_card/load
 
 ### Effects
 function rounds:reset/effects
