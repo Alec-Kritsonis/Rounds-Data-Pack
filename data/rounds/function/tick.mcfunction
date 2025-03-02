@@ -25,3 +25,8 @@ execute as @a if items entity @s weapon.mainhand minecraft:crossbow run function
 
 # Reset scores
 function rounds:reset/reset_scores
+
+
+
+
+function rounds:gun_control/gun_control_tick

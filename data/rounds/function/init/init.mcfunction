@@ -40,6 +40,9 @@ scoreboard players set @a arrow_damage 100
 scoreboard players set @a Player_Scales 100
 scoreboard players set @a arrow_gravity 100
 
+### Init Gun Control
+
+
 ### Maps
 function rounds:maps/spawn_markers
 
