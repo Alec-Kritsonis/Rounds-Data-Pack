@@ -2,7 +2,8 @@
 # Starts a new bout.
 #
 
-### State
+### Reset
+function rounds:reset/level/bout
 
 ### Start
 function rounds:maps/load_next_map

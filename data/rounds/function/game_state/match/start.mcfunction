@@ -2,9 +2,8 @@
 # Starts a new match.
 #
 
-### State
-
-### Check ready players
+### Reset
+function rounds:reset/level/match
 
 ### Start
 function rounds:game_state/round/start

@@ -23,6 +23,8 @@ data modify storage minecraft:rounds temp_scale set value {"AtriScale":0}
 
 ### Create necessary scoreboards
 scoreboard objectives add Variables dummy
+scoreboard objectives add Bout_Variables dummy
+scoreboard objectives add Scoreboard dummy
 scoreboard objectives add Player_Scales dummy
 scoreboard objectives add carrot_uses minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add Global_Delay dummy
