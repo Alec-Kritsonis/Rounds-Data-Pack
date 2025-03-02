@@ -13,7 +13,7 @@ execute if score game_state Variables matches 0 run function rounds:game_state/m
 ### 1 - bout
 execute if score game_state Variables matches 1 run function rounds:game_state/bout/tick
 # TODO: Remove this lol
-execute if score game_state Variables matches 1 if score global_delay Global_Delay matches 5 if predicate rounds:checks/is_sneaking run tag @r[tag=alive] remove alive
+execute if score game_state Variables matches 1 if score global_delay Global_Delay matches 5 as @a if predicate rounds:checks/is_sneaking run tag @r[tag=alive] remove alive
 
 ### Global Delay Timer
 scoreboard players add global_delay Global_Delay 1
