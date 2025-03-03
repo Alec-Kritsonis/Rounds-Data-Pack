@@ -16,7 +16,8 @@ scoreboard players set countdown_started Variables 0
 
 scoreboard objectives remove Scoreboard
 scoreboard objectives add Scoreboard dummy
-execute as @a[tag=gamer,team=!] run scoreboard players set @s Scoreboard 0
+scoreboard objectives setdisplay sidebar Scoreboard
+execute as @a[tag=gamer,team=] run scoreboard players set @s Scoreboard 0
 execute as @a[tag=gamer,team=Red] run scoreboard players set Red Scoreboard 0
 execute as @a[tag=gamer,team=Blue] run scoreboard players set Blue Scoreboard 0
 execute as @a[tag=gamer,team=Yellow] run scoreboard players set Yellow Scoreboard 0

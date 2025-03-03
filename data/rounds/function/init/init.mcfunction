@@ -25,6 +25,7 @@ data modify storage minecraft:rounds temp_scale set value {"AtriScale":0}
 scoreboard objectives add Variables dummy
 scoreboard objectives add Bout_Variables dummy
 scoreboard objectives add Scoreboard dummy
+scoreboard objectives add Settings dummy
 scoreboard objectives add Player_Scales dummy
 scoreboard objectives add carrot_uses minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add Global_Delay dummy
@@ -41,6 +42,8 @@ scoreboard players set @a arrow_velocity 50
 scoreboard players set @a arrow_damage 100
 scoreboard players set @a Player_Scales 100
 scoreboard players set @a arrow_gravity 100
+
+scoreboard players set RoundsToWin Settings 7
 
 ### Maps
 function rounds:maps/spawn_markers
