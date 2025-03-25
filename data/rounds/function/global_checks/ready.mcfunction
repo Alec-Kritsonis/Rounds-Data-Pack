@@ -8,4 +8,4 @@ execute as @a[scores={carrot_uses=1..}] if predicate rounds:holding/unready run 
 scoreboard players reset @s carrot_uses
 
 ### Update all_ready
-function rounds:checks/all_ready
+function rounds:global_checks/all_ready

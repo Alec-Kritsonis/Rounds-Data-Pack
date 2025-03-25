@@ -8,13 +8,13 @@
 #
 
 ### 0 - Lobby
-execute if score game_state Variables matches 0 as @a[tag=gamer] run function rounds:checks/ready
-execute if score game_state Variables matches 0 if score all_ready Variables matches 1 if score countdown_started Variables matches 0 run function rounds:game_state/match/countdown/start
-execute if score game_state Variables matches 0 if score all_ready Variables matches 1 run scoreboard players set countdown_started Variables 1
+execute if score game_state Variables matches 0 run function rounds:game_state/match/tick
 
 ### 1 - bout
 execute as @a[tag=gamer] run score players add @s gamerCount 1
 execute if score game_state Variables matches 1 if score @a gamerCount > 1 run function rounds:game_state/bout/tick
+# TODO: Remove this lol
+execute if score game_state Variables matches 1 if score global_delay Global_Delay matches 5 as @a if predicate rounds:checks/is_sneaking run tag @r[tag=alive] remove alive
 
 ### Global Delay Timer
 scoreboard players add global_delay Global_Delay 1
