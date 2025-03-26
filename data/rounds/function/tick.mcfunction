@@ -7,12 +7,15 @@
 # 1 - bout
 #
 
+# Count players and teams
+scoreboard players set gamer_count Variables 0
+execute as @e[tag=gamer] run scoreboard players add gamer_count Variables 1
+
 ### 0 - Lobby
 execute if score game_state Variables matches 0 run function rounds:game_state/match/tick
 
 ### 1 - bout
-execute as @a[tag=gamer] run score players add @s gamerCount 1
-execute if score game_state Variables matches 1 if score @a gamerCount > 1 run function rounds:game_state/bout/tick
+execute if score game_state Variables matches 1 if score gamer_count Variables matches 2.. run function rounds:game_state/bout/tick
 # TODO: Remove this lol
 execute if score game_state Variables matches 1 if score global_delay Global_Delay matches 5 as @a if predicate rounds:checks/is_sneaking run tag @r[tag=alive] remove alive
 
