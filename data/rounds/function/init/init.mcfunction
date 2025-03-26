@@ -43,7 +43,7 @@ scoreboard players set @a arrow_damage 100
 scoreboard players set @a Player_Scales 100
 scoreboard players set @a arrow_gravity 100
 
-scoreboard players set RoundsToWin Settings 7
+scoreboard players set RoundsToWin Settings 3
 
 ### Maps
 function rounds:maps/spawn_markers

@@ -8,6 +8,7 @@ execute as @a run function rounds:reset/attributes
 ### Tags
 tag @a remove spectator
 tag @a remove ready
+tag @e remove match_winner
 
 ### Scores
 scoreboard players set xp_timer Variables -1

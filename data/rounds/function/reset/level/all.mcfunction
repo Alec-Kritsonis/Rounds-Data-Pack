@@ -5,6 +5,7 @@
 ### Tags
 tag @e remove alive
 tag @e remove won_bout_once
+tag @e remove bout_winner
 
 ### Scores
 scoreboard players reset global_delay Global_Delay
