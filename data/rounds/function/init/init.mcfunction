@@ -39,6 +39,7 @@ scoreboard objectives add arrow_damage dummy
 scoreboard objectives add arrow_piercing dummy
 scoreboard objectives add arrow_gravity dummy
 scoreboard objectives add adebug dummy "Arrow debugging"
+scoreboard objectives add TeamStats dummy
 
 ### Initialize scoreboards
 scoreboard players set @a arrow_velocity 50
