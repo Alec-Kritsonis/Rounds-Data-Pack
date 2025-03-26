@@ -50,3 +50,6 @@ function rounds:maps/spawn_markers
 
 ### Effects
 function rounds:reset/effects
+
+### Gamerules
+function rounds:init/gamerules

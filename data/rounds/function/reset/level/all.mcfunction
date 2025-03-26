@@ -3,8 +3,8 @@
 #
 
 ### Tags
-tag @a remove alive
-tag @a remove won_bout_once
+tag @e remove alive
+tag @e remove won_bout_once
 
 ### Scores
 scoreboard players reset global_delay Global_Delay

@@ -7,6 +7,6 @@ function rounds:reset/effects
 
 ### Tags
 tag @a remove ready
-tag @a remove won_bout_once
+tag @e remove won_bout_once
 
 ### Scores
