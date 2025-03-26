@@ -22,4 +22,4 @@ execute if score yellow_alive Bout_Variables matches 1.. run scoreboard players 
 execute if score green_alive Bout_Variables matches 1.. run scoreboard players add teams_alive Bout_Variables 1
 
 # Add FFA players as their own team
-execute as @e[tag=alive,team=] run scoreboard players add teams_alive Bout_Variables 1
+execute as @e[tag=alive,team=FFA] run scoreboard players add teams_alive Bout_Variables 1

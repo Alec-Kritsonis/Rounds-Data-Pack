@@ -7,16 +7,19 @@ team add Red
 team add Blue
 team add Yellow
 team add Green
+team add FFA
 
 team modify Red color dark_red
 team modify Blue color dark_blue
 team modify Yellow color yellow
 team modify Green color green
+team modify FFA color black
 
 team modify Red friendlyFire false
 team modify Blue friendlyFire false
 team modify Yellow friendlyFire false
 team modify Green friendlyFire false
+team modify FFA friendlyFire true
 
 ### Health Scale
 data modify storage minecraft:rounds temp_scale set value {"AtriScale":0}
