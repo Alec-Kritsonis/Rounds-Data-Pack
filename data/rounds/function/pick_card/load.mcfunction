@@ -7,6 +7,7 @@ scoreboard players set @a arrow_gravity 100
 scoreboard players set @a arrow_velocity 50
 scoreboard players set @a arrow_damage 6
 scoreboard players set @a arrow_piercing 0
+scoreboard players set pick_state pick_card_data 1
 
 # Reset bows
 item replace entity @a enderchest.13 with minecraft:air
@@ -33,19 +34,3 @@ execute as @e[tag=stall_4,tag=!description,type=minecraft:text_display] at @s ru
 # Shrink items and descriptions
 execute as @e[type=item_display,tag=pick_card] run data merge entity @s {transformation:{scale:[0.75f,0.75f,0.75f]}}
 execute as @e[tag=description,type=minecraft:text_display] run data merge entity @s {transformation:{scale:[0.5f,0.5f,0.5f]}}
-
-##### TEST CODE #####
-tag @e[tag=stall_1] add pick_card_current
-function rounds:pick_card/assign_stall/explosive_shots
-tag @e[tag=stall_2] add pick_card_current
-function rounds:pick_card/assign_stall/fountain_shots
-tag @e[tag=stall_3] add pick_card_current
-function rounds:pick_card/assign_stall/lightning_shots
-tag @e[tag=stall_4] add pick_card_current
-function rounds:pick_card/assign_stall/damage_up
-tag @e[tag=stall_5] add pick_card_current
-function rounds:pick_card/assign_stall/piercing_up
-
-tag @a add pick_needed
-execute as @e[tag=pick_card_marker] at @s run tp @a ^ ^3 ^10 facing entity @s
-execute as @r run function rounds:pick_card/assign_picking

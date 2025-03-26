@@ -3,3 +3,5 @@
 3 = Lightning
 4 = Damage up
 5 = Piercing up
+6 = Airburst
+7 = Zero gravity
