@@ -53,3 +53,6 @@ function rounds:reset/effects
 
 ### Gamerules
 function rounds:init/gamerules
+
+### Guns
+function rounds:gun_control/init
