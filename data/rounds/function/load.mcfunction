@@ -1,4 +1,4 @@
-say Loaded Rounds version: 5
+say Loaded Rounds version: 6
 
 ################################################################################
 # Setup
