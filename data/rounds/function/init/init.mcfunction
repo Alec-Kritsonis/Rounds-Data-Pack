@@ -42,6 +42,7 @@ scoreboard players set @a arrow_velocity 50
 scoreboard players set @a arrow_damage 100
 scoreboard players set @a Player_Scales 100
 scoreboard players set @a arrow_gravity 100
+scoreboard players set gravity_timer arrow_gravity 60
 
 scoreboard players set RoundsToWin Settings 3
 

@@ -1,6 +1,6 @@
 #
 # Execute this as an arrow to run any inground effects it has
-# 
+#
 
 # Multiline effects are broken out into sub-functions
 execute if entity @s[tag=explosive_arrow] run function rounds:arrow_modifiers/inground_effects/explosive_arrow

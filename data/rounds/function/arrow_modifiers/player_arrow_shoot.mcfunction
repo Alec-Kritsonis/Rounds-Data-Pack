@@ -1,7 +1,7 @@
 #
 # Execute this as an arrow to scale velocity by @p's arrow_velocity score. 1 = 2%, 50 = 100%
 # Also changes damange and pierce level based on @p's respective scoreboard values
-# 
+#
 # If the arrrow's resulting value is over 10 blocks/tick, the game resets it to zero. 166 seems to be fine for bows, 167 has this happen occasionally. This is about a 3.33 multiplier. Try to stay below 166. I did not test the max value with crossbows.
 #
 
@@ -37,7 +37,7 @@ tag @s add player
 execute if data entity @s {weapon:{components:{"minecraft:custom_data":{explode:1}}}} run tag @s add explosive_arrow
 execute if data entity @s {weapon:{components:{"minecraft:custom_data":{fountain:1}}}} run tag @s add fountain_arrow
 execute if data entity @s {weapon:{components:{"minecraft:custom_data":{lightning:1}}}} run tag @s add lightningarrow
-execute store result entity @s Air short 1 run scoreboard players get gravitytimer arrow_gravity
+execute store result entity @s Air short 1 run scoreboard players get gravity_timer arrow_gravity
 
 # Tag it so it doesn't get modified again
 tag @s add modified_arrow
